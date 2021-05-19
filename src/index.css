@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  font-family: "montseratt", sans-serif;
+  width: 1920px;
+  height: 1080px;
+}
+
+.main {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.links {
+  width: 1800px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.welcome {
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  display: inline-block;
+
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.user {
+  color: red;
+}
+
+.links .login-link {
+  width: 198px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.links .weather-link {
+  width: 198px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.links .calculator-link {
+  width: 198px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.links .minesweeper-link {
+  width: 198px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.links :focus {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.levels .easy-level {
+  display: list-item;
+  font-size: 20px;
+  text-align: center;
+
+  margin-left: 885px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+
+  width: 150px;
+  height: 30px;
+  background-color: rgba(198, 255, 212, 1);
+
+  border: 2px solid;
+  border-radius: 8px;
+}
+
+.levels .medium-level {
+  display: list-item;
+  font-size: 20px;
+  text-align: center;
+
+  margin-left: 885px;
+  margin-bottom: 5px;
+
+  width: 150px;
+  height: 30px;
+  background-color: rgba(198, 255, 212, 1);
+
+  border: 2px solid;
+  border-radius: 8px;
+}
+
+.levels .hard-level {
+  display: list-item;
+  font-size: 20px;
+  text-align: center;
+
+  margin-left: 885px;
+  margin-bottom: 10px;
+
+  width: 150px;
+  height: 30px;
+  background-color: rgba(198, 255, 212, 1);
+
+  border: 2px solid;
+  border-radius: 8px;
+}
+
+.game {
+  margin-top: 20px;
+}
+
+.app {
+  background-image: url("./assets/cold-bg.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out;
+}
+
+.app.warm {
+  background-image: url("./assets/warm-bg.jpg");
+}
+
+main {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.75)
+  );
+  padding: 25px;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 75px;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 100%;
+  padding: 15px;
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 16px 16px 16px 16px;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+  color: #313131;
+  font-size: 20px;
+
+  transition: 0.4s ease;
+}
+
+.search-box .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.location-box .location {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.location-box .date {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-box .temperature {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+
+  padding: 15px 25px;
+
+  color: #fff;
+  font-size: 102px;
+  font-weight: 900;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .weather {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.calculator {
+  display: inline-block;
+  width: 600px;
+  height: 800px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.tile {
+  display: inline-block;
+  text-align: center;
+  margin: 0px;
+}
+
+.win-message {
+  margin-top: 20px;
+  display: none;
+  color: green;
+}
+
+.lose-message {
+  margin-top: 20px;
+  display: none;
+  color: red;
+}
+
+.input-fields {
+  width: 250px;
+  margin-top: 50px;
+  margin-left: 25px;
+  display: inline-block;
+  text-align: left;
+}
+
+.login-box {
+  margin-top: 50px;
+  margin-left: 810px;
+  width: 300px;
+  height: 400px;
+  margin-bottom: 50px;
+  border: 3px solid black;
+}
+
+.input-fields .google-login {
+  display: block;
+  width: 182px;
+  margin-top: 20px;
+  margin-left: 34px;
+}
+
+.input-fields .login-title {
+  text-align: center;
+}
+
+.input-fields .user-input {
+  margin-top: 50px;
+  font-family: sans-serif;
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  background: none;
+}
+
+.input-fields .password-input {
+  margin-top: 5px;
+  font-family: sans-serif;
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  background: none;
+}
+
+.input-fields .login-button {
+  margin-top: 50px;
+  width: 250px;
+  height: 30px;
+
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.25);
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.input-fields .register-button {
+  margin-top: 5px;
+  width: 250px;
+  height: 30px;
+
+  border: 2px solid black;
+  border-radius: 25px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: black;
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 6px;
+}
+
+.register-fields {
+  width: 250px;
+  margin-top: 50px;
+  margin-left: 25px;
+  display: inline-block;
+  text-align: left;
+}
+
+.register-box {
+  margin-top: 50px;
+  margin-left: 810px;
+  width: 300px;
+  height: 425px;
+  margin-bottom: 50px;
+  border: 3px solid black;
+}
+
+.register-fields .register-title {
+  text-align: center;
+}
+
+.register-fields .email-register {
+  margin-top: 5px;
+  font-family: sans-serif;
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  background: none;
+}
+
+.register-fields .user-register {
+  margin-top: 50px;
+  font-family: sans-serif;
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  background: none;
+}
+
+.register-fields .password-register {
+  margin-top: 5px;
+  font-family: sans-serif;
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  background: none;
+}
+
+.register-fields .password-register-confirm {
+  margin-top: 5px;
+  font-family: sans-serif;
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  background: none;
+}
+
+.register-fields .create-button {
+  margin-top: 50px;
+  width: 250px;
+  height: 30px;
+
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.25);
+  font-family: sans-serif;
+  font-size: 16px;
+}
